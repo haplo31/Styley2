@@ -42,7 +42,7 @@
   background: #082b34;
   border-radius: 72px;
   color: #ffffff;
-  font-size: 400%;
+  font-size: 250%;
   padding: 3% 5% 3% 5%;
   text-decoration: none;
   width: 35%;
@@ -53,14 +53,25 @@
   display: inline-block;
   opacity: 0.6;
   transition: all 1s;
+  border: 4px solid #082b34;
 }
 .mainBtn:hover {
   opacity: 1;
+  border: 4px solid white;
 }
 .mainBtn i{
   display: inline;
   margin-right: 7%;
+  font-size: 200%;
+  line-height: 130%;
 }
+.mainBtn p{
+  display: inline-block;
+  text-align: center;
+  margin: auto;
+  vertical-align: top;
+}
+
 .mozaic {
   width: 90%;
   margin: auto;
