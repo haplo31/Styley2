@@ -1,0 +1,27 @@
+<header class="hero-unit" id="banner">
+  <div class="container">
+    <h1>Styley</h1>
+    <p class="lead">Unleash your imagination!</p>
+    <div class="mainBtn"><i class="fa fa-paper-plane"></i>Request</div>
+    <div class="mainBtn"><i class="fa fa-map-signs"></i>Explore</div>
+  </div>
+</header>
+
+<div class="mozaic">
+  <h1>Gallery</h1>
+  <div deckgrid class="deckgrid" source="photos">
+    <div class="a-card">
+     <img class="imagegrid" src="{{card.src}}">
+    </div>
+  </div>
+
+  <form class="thing-form">
+    <label>Syncs in realtime across clients</label>
+    <p class="input-group">
+      <input type="text" class="form-control" placeholder="Add a new thing here." ng-model="main.newThing">
+      <span class="input-group-btn">
+        <button type="submit" class="btn btn-primary" ng-click="main.addThing()">Add New</button>
+      </span>
+    </p>
+  </form>
+</div>

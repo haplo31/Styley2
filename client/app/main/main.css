@@ -1,0 +1,112 @@
+.thing-form {
+  margin: 20px 0;
+}
+
+#banner {
+  border-bottom: none;
+  margin-top: -20px;
+}
+
+#banner h1 {
+  font-family: 'Comfortaa';
+  font-size: 1000%;
+  font-weight: normal;
+  text-align: center;
+  text-shadow: 3px 3px 6px #082b34;
+  font-weight: bold;
+}
+
+
+.hero-unit {
+  position: relative;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  color: #F5F5F5;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  background-image: url("./../../assets/images/header.jpg");
+  background-size: cover;
+}
+.lead {
+  font-family: 'Comfortaa';
+  font-weight: normal;
+  text-align: center;
+  text-shadow: 2px 2px 4px #082b34;
+  font-size: 400%;
+}
+.navbar-text {
+  margin-left: 15px;
+}
+.mainBtn {
+  font-family: 'Comfortaa';
+  background: #082b34;
+  border-radius: 72px;
+  color: #ffffff;
+  font-size: 400%;
+  padding: 3% 5% 3% 5%;
+  text-decoration: none;
+  width: 35%;
+  margin: auto;
+  margin-left: 3%;
+  margin-right: 3%;
+  margin-top: 10%;
+  display: inline-block;
+  opacity: 0.6;
+  transition: all 1s;
+}
+.mainBtn:hover {
+  opacity: 1;
+}
+.mainBtn i{
+  display: inline;
+  margin-right: 7%;
+}
+.mozaic {
+  width: 90%;
+  margin: auto;
+}
+.mozaic h1 {
+  font-family: 'Comfortaa';
+  font-size: 500%;
+  font-weight: normal;
+  text-shadow: 3px 3px 6px #082b34;
+  font-weight: bold;
+  margin-top: 2%;
+  margin-bottom: 1%;
+}
+.deckgrid[deckgrid]::before {
+   /* Specifies that the grid should have a maximum of 4 columns. Each column will have the classes 'column' and 'column-1-4' */
+   content: '4 .column.column-1-4';
+   font-size: 0; /* See https://github.com/akoenig/angular-deckgrid/issues/14#issuecomment-35728861 */
+   visibility: hidden;
+}
+
+.deckgrid .column {
+   float: left;
+}
+
+.deckgrid .column-1-4 {
+   width: 25%;
+}
+
+.deckgrid .column-1-1 {
+   width: 100%;
+}
+
+@media screen and (max-width: 480px){
+   .deckgrid[deckgrid]::before {
+       content: '1 .column.column-1-1';
+   }
+}
+.imagegrid{
+  max-width: 100%;
+  border: 4px solid black;
+
+}
+
+
+.a-card{
+   margin-top: 1%;
+   margin-left: 1%;
+   position: relative;
+}
