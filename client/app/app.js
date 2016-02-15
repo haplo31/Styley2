@@ -11,7 +11,10 @@ angular.module('styley2App', [
   'ui.router',
   'ui.bootstrap',
   'validation.match',
-  'akoenig.deckgrid'
+  'akoenig.deckgrid',
+  'ngAnimate',
+  'ngFileUpload',
+  'nzTour'
 ])
   .config(function($urlRouterProvider, $locationProvider) {
     $urlRouterProvider

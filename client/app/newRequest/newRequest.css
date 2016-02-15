@@ -1,0 +1,224 @@
+#canvas{
+  border-bottom: 1px solid rgba(0,0,0,0.3); 
+  background-color: #FFF;
+  box-shadow: 0 9px 20px -5px rgba(0,0,0,0.8);
+}
+.newRequest{
+	text-align: center;
+}
+.newRequest h1{
+	font-family: 'Comfortaa';
+  font-size: 500%;
+  font-weight: normal;
+  text-shadow: 3px 3px 6px #082b34;
+  font-weight: bold;
+  margin-top: 2%;
+  margin-bottom: 3%;
+  text-align: center;
+}
+.newRequest .btnLoad{
+	margin: auto;
+	color: white;
+	background: #777;
+	opacity: 0.6;
+	font-family: 'Comfortaa';
+	font-size: 200%;
+	width: auto;
+	border-radius: 72px;
+	white-space: nowrap;
+	padding:2%;
+	margin-bottom: 3%;
+}
+.newRequest i{
+	font-size: 200%;
+	vertical-align: middle;
+	margin-left: 2%;
+}
+.newRequest .imgBlock img{
+
+}
+.newRequest .imgBlock{
+	text-align: center;
+}
+.newRequest .singlePic{
+	display: table;
+  table-layout: fixed;	
+}
+.newRequest .loadMore{
+	display: table-cell;
+  vertical-align: middle;
+  float: none;
+	border:4px dotted #aaa;
+}
+.newRequest .pictureBlock{
+	display: table-cell;
+  vertical-align: middle;
+  float: none;
+}
+
+.newRequest .canvas{
+	z-index:20;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color:rgba(0, 0, 255, 0); 
+	top: 2.5%;
+	left: 2.5%;
+	margin: auto;
+}
+.newRequest .pictureZone{
+	z-index:1;
+	position: absolute;
+	max-height: 95%;
+	top: 2.5%;
+	left: 2.5%;
+	width: 95%;
+
+	margin:auto;
+	box-shadow: 8px 8px 12px #aaa;
+}
+div.placedbuttons:hover input {
+  display: block;    
+}
+
+div.placedbuttons input {
+  position:absolute;
+  display:none;
+  outline: none;
+  z-index: 60;
+}
+.dragbtn{
+	position: absolute;
+	box-shadow: none;
+	z-index: 50;
+}
+.imgOverviewBlock{
+	display: block;
+	margin-top: 3%;
+}
+.imgOverview{
+	margin-bottom: 5%;
+	max-width: 100%;
+	box-shadow: 8px 8px 12px #aaa;
+}
+.newRequest .symbolstodrag{
+	display: table-cell;
+  vertical-align: middle;
+  float: none;
+	border:4px dotted #aaa;
+}
+.newRequest .symbolstodrag input{
+    margin: 0;
+    padding: 0;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    display: none;
+    
+}
+.newRequest .symbolstodrag input:checked +.buttons{
+    -webkit-filter: none;
+       -moz-filter: none;
+            filter: none;
+    border: 5px #008dd7 solid;
+    border-radius: 50px;
+    padding: 0px;
+}
+.newRequest .symbolstodrag i{
+	color:black;
+	font-size: 48px;
+	margin-top: 40%;
+}
+.newRequest .buttons{
+    cursor:pointer;
+    background-size:contain;
+    background-repeat:no-repeat;
+    display:block;
+    width:56px;height:56px;
+    -webkit-transition: all 100ms ease-in;
+       -moz-transition: all 100ms ease-in;
+            transition: all 100ms ease-in;
+    margin-top: 40%;
+}
+.newRequest .redcustombtn{
+	background-image: url('./../../../assets/images/logo_button_red.png');
+}
+.newRequest .redpointer{
+	cursor: url("./../../../assets/images/logo_button_red.png") 24 24, auto;
+}
+.newRequest .greencustombtn{
+	background-image: url('./../../../assets/images/logo_button_green.png');
+}
+.newRequest .greenpointer{
+	cursor: url("./../../../assets/images/logo_button_green.png") 24 24, auto;
+}
+.newRequest .bluecustombtn{
+	background-image: url('./../../../assets/images/logo_button_blue.png');
+}
+.newRequest .bluepointer{
+	cursor: url("./../../../assets/images/logo_button_blue.png") 24 24, auto;
+}
+.newRequest .purplecustombtn{
+	background-image: url('./../../../assets/images/logo_button_purple.png');
+}
+.newRequest .purplepointer{
+	cursor: url("./../../../assets/images/logo_button_purple.png") 24 24, auto;
+}
+.newRequest .pencilcustombtn{
+	background-image: url('./../../../assets/images/pencil_button.png');
+}
+.newRequest .pencilpointer{
+	cursor: url("./../../../assets/images/pencil_button.png") 0 48, auto;
+}
+.newRequest .undocustombtn{
+	background-image: url('./../../../assets/images/undo.png');
+	width:56px;height:56px;
+	background-size: cover;
+}
+.meaningbuttons{
+	border: 2px solid black;
+	border-radius: 2%;
+	width: 100%;
+	margin: auto;
+	margin-bottom: 2%;
+	margin-top: 1%;
+	padding: 2%;
+	padding-top: 1%;
+  font-family: 'Comfortaa';
+  font-size: 140%;
+  color: white;
+}
+.meaningbuttons span{
+	font-weight: bold;
+	font-size: 150%;
+}
+.meaningbuttons select{
+	color:black;
+}
+.meaningbuttons textarea{
+	color:black;
+	font-size: 70%;
+}
+.meaningred{
+	background-color: #CC0101;
+}
+.meaninggreen{
+	background-color: #07700A;
+}
+.meaningblue{
+	background-color: #014485;
+}
+.meaningpurple{
+	background-color: #B401D0;
+}
+.meaningglobal{
+	background-color: #777;
+}
+.meaningtags{
+	background-color: #082b34;
+}
+.addInfo{
+	display: block;
+	margin: auto;
+	width: 90%;
+}

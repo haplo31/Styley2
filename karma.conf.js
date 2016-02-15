@@ -23,6 +23,10 @@ module.exports = function(config) {
       'client/bower_components/angular-ui-router/release/angular-ui-router.js',
       'client/bower_components/angular-validation-match/dist/angular-validation-match.min.js',
       'client/bower_components/angular-deckgrid/angular-deckgrid.js',
+      'client/bower_components/angular-animate/angular-animate.js',
+      'client/bower_components/ng-file-upload/ng-file-upload.js',
+      'client/bower_components/nz-tour/dist/nz-tour.min.js',
+      'client/bower_components/angular-canvas-painter/dist/angular-canvas-painter.js',
       'client/bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'node_modules/socket.io-client/socket.io.js',

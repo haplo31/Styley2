@@ -1,0 +1,89 @@
+<!-- Bandeau -->
+<header class="hero-unit" id="banner">
+  <div class="container">
+    <h1>Styley</h1>
+    <p class="lead">Unleash your imagination!</p>
+  </div>
+</header>
+<!-- Bloc nouvelle requete -->
+<div class="container newRequest">
+	<h1>Create a request</h1>
+	<!-- Chargement fichier de type image avec une maxsize de 20Mb-->
+	<button class="btnLoad" type="file" ngf-select="loadFiles($file, $invalidFiles)" ngf-max-size="20MB" accept="image/*" ng-show="files.length<=0">Load an image:<i class="fa fa-upload"></i></button>
+	<div class="imgBlock" ng-show="files.length>0">
+		<div class="singlePic">
+			<!-- Bloc récap photos à gauche -->
+			<div class="col-xs-1 loadMore">
+				<div class="imgOverviewBlock" ng-repeat="(key,file) in files" >
+					<img class="imgOverview" ngf-src="files[key]" ng-click="setSelected(key)">
+				</div>
+				<button class="btnLoad btnLoadMore" type="file" ngf-select="loadFiles($file, $invalidFiles)" ngf-max-size="20MB" accept="image/*">Load more images</button>
+			</div>	
+			<!-- Bloc photo centrale -->
+			<div class="pictureBlock col-xs-10">
+
+				<img class="pictureZone" id="pictureZone" ngf-src="files[picSelected]">
+				<div ng-repeat="(key, value) in files">
+					<div ng-class="{redpointer:redPointer,bluepointer:bluePointer,greenpointer:greenPointer,purplepointer:purplePointer,pencilpointer:pencilPointer}" class="canvas" pw-canvas options="{backgroundColor:'',color: '#000',active:drawActive}" version="model[key].version" ng-show="key == picSelected" ng-mouseup="clickOnImg($event)"></div>					
+				</div>
+				<div class="placedbuttons" ng-repeat='(index,btn) in btnCurrent | filter: { imgPos: picSelected }'>
+		      <img  id="{{ 'btn' + (index+1) }}" class="dragbtn noselect" ng-src="/assets/images/logo_button_{{btn.color}}.png" ng-style="{'left':btn.posLeft-24, 'top': btn.posTop-24}" >
+					<input type="image" src="/assets/images/round_close_button.png" type="button" ng-style="{'left':btn.posLeft-16, 'top': btn.posTop-16}" ng-click="removePlaced(index)" class="noselect"/>
+				</div> 
+			</div>
+			<!-- Bloc outils de modifs -->
+			<div class="symbolstodrag col-xs-1">
+				<input id="redbtn" type="radio" name="buttons" value="redbtn" ng-click="select('red')" ng-checked="redPointer"/>
+				<label class="buttons redcustombtn" for="redbtn"></label>
+				<input id="greenbtn" type="radio" name="buttons" value="greenbtn" ng-click="select('green')" ng-checked="greenPointer"/>
+				<label class="buttons greencustombtn" for="greenbtn"></label>
+				<input id="bluebtn" type="radio" name="buttons" value="bluebtn" ng-click="select('blue')" ng-checked="bluePointer"/>
+				<label class="buttons bluecustombtn" for="bluebtn"></label>
+				<input id="purplebtn" type="radio" name="buttons" value="purplebtn" ng-click="select('purple')" ng-checked="purplePointer"/>
+				<label class="buttons purplecustombtn" for="purplebtn"></label>
+				<input id="pencilbtn" type="radio" name="buttons" value="pencilbtn" ng-click="select('pencil')" ng-checked="pencilPointer"/>
+				<label class="buttons pencilcustombtn" for="pencilbtn"></label>
+				<label class="buttons undocustombtn" ng-click="undoDraw()"></label>
+			</div>
+		</div>
+	</div>
+	<!-- Bloc de couleurs apparaissant si un bouton de cette couleur est posé -->
+	<div class="container">
+		<div class="col-xs-6">	
+			<div class="meaningbuttons meaningglobal" ng-show="files.length>0">
+			 	<span>General description</span>
+				<textarea class="addInfo infosGlobal" ng-model="infosGlobal" rows="11" cols="50">
+		  	</textarea>
+			</div>
+			<div class="meaningbuttons meaningtags" ng-show="files.length>0">
+			 	<span>Keywords</span>
+				<textarea class="addInfo infostags" ng-model="infosTags" rows="5" cols="50">
+		  	</textarea>
+			</div>
+		</div>
+		<div class="col-xs-6">
+			<div ng-show="nbRed>0" class="meaningbuttons meaningred">
+			 	<span>Red buttons</span>
+			 	<textarea class="addInfo infosRed" ng-model="infosRed">
+			 	</textarea>
+			</div>
+			<div ng-show="nbGreen>0" class="meaningbuttons meaninggreen">
+			 	<span>Green buttons</span>
+			 	<textarea class="addInfo infosGreen" ng-model="infosGreen">
+		  	</textarea>
+			</div>
+			<div ng-show="nbBlue>0" class="meaningbuttons meaningblue">
+			 	<span>Blue buttons</span>
+				<textarea class="addInfo infosBlue" ng-model="infosBlue">
+		  	</textarea>
+			</div>
+			<div ng-show="nbPurple>0" class="meaningbuttons meaningpurple">
+			 	<span>Purple buttons</span>
+				<textarea class="addInfo infosPurple" ng-model="infosPurple">
+		  	</textarea>
+			</div>
+		</div>
+	</div>
+
+
+</div>
